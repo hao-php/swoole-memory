@@ -1,0 +1,41 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer itself is not needed
+composer.phar
+composer.lock
+vendor/
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+/AGENTS.md
+/analysis
+
+# 测试配置文件（本地配置，不提交到 Git）
+tests/config/database.local.php
+
+# 测试覆盖率报告
+coverage/
+.phpunit.cache/
+
+# IDE 文件
+.vscode/
+*.swp
+*.swo
+*~
