@@ -13,8 +13,6 @@ class TableCacheManager
 
     public static ?LoggerInterface $logger;
 
-    public static bool $enableDebug = true;
-
     private static array $tables = [];
     // 索引表
     private static ?TableCache $indexTable = null;
@@ -89,11 +87,6 @@ class TableCacheManager
         self::$logger = $logger;
     }
 
-    public static function setEnableDebug(bool $enableDebug): void
-    {
-        self::$enableDebug = $enableDebug;
-    }
-
     public static function getIndexTable(): ?TableCache
     {
         return self::$indexTable;
@@ -153,7 +146,7 @@ class TableCacheManager
             return false;
         }
 
-        TableCacheManager::$enableDebug && TableCacheManager::$logger && TableCacheManager::$logger->debug('TableCacheManager set successful', $logContext);
+        TableCacheManager::$logger && TableCacheManager::$logger->debug('TableCacheManager set successful', $logContext);
 
         return true;
     }

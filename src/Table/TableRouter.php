@@ -36,7 +36,7 @@ class TableRouter
         $indexTable = TableCacheManager::getIndexTable();
         $result = $indexTable->get($key);
         if ($result === false) {
-            TableCacheManager::$enableDebug && TableCacheManager::$logger && TableCacheManager::$logger->debug("TableRouter get index failed: {$key}");
+            TableCacheManager::$logger && TableCacheManager::$logger->debug("TableRouter get index failed: {$key}");
             return null;
         }
         return $result;
